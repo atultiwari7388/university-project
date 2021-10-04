@@ -1,0 +1,23 @@
+<td><?php echo get_value("student","st_id","st_id", $data['st_id'])?></td>
+<td><?php echo get_value("student","st_id","st_name",$data['st_id'])?></td>
+<td><?php echo get_value("student","st_id","st_father",$data['st_id'])?></td>
+<td><?php echo get_value("course","course_id","course_name",$data['st_course'])?></td>
+<td><?php echo get_value("course","course_id","course_fees",$data['st_course'])?></td>
+<td><?php echo get_value("fees","st_id","st_paid",$data['st_id'])?></td>
+
+<td><?php echo $fees_data=get_fees_value($data
+['st_id']); echo $fees_data['st_bal'];?></td>
+
+<td><?php 
+    if($fees_data['st_bal']==0)
+    $bal="NULL";
+    else
+     $bal=$fees_data['st_bal'];
+     echo($bal);
+     ?></td>
+
+<td><?php $fees_data=get_fees_value($data['st_id']); echo $fees_data['$date'];?></td>
+<td><?php $fees_data=get_fees_value($data['st_id']); echo $fees_data['$desc'];?></td>
+<td><?php echo get_value("course","course_id","course_name",$data['st_course'])?></td>
+<td><?php echo get_value("course","course_id","course_fees",$data['st_course'])?></td>
+<td><?php echo get_value("course","course_id","course_fees",$data['st_course'])?></td>
